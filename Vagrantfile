@@ -74,9 +74,9 @@ Vagrant.configure("2") do |config|
   # Enable provisioning with chef server, specifying the chef server URL,
   # and the path to the validation key (relative to this Vagrantfile).
   #
-  # config.vm.provision :chef_client do |chef|
-  #   chef.chef_server_url = "https://api.opscode.com/organizations/leopoard"
-  #   chef.validation_client_name = "leopoard-validator"
-  #   chef.validation_key_path = ".chef/leopoard-validator.pem"
-  # end
+  config.vm.provision :chef_client do |chef|
+    chef.chef_server_url = "https://api.opscode.com/organizations/leopoard"
+    chef.validation_client_name = "leopoard-validator"
+    chef.validation_key_path = ".chef/leopoard-validator.pem"
+  end
 end
