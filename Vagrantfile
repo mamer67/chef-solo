@@ -16,7 +16,7 @@ Vagrant.configure("2") do |config|
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
   config.vm.box_url = " http://files.vagrantup.com/precise32.box"
-
+  
   # This can be set to the host name you wish the guest machine to have. Vagrant
   # will automatically execute the configuration necessary to make this happen.
   config.vm.hostname = "mamer67-starter"
@@ -24,7 +24,7 @@ Vagrant.configure("2") do |config|
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
-  # config.vm.network :forwarded_port, guest: 80, host: 8080
+    config.vm.network :forwarded_port, guest: 80, host: 8080
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
@@ -78,5 +78,6 @@ Vagrant.configure("2") do |config|
     chef.chef_server_url = "https://api.opscode.com/organizations/leopoard"
     chef.validation_client_name = "leopoard-validator"
     chef.validation_key_path = ".chef/leopoard-validator.pem"
+    chef.node_name = "mamer67-starter"
   end
 end
