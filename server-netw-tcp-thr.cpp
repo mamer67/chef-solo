@@ -77,5 +77,5 @@ void dostuff (int sock)
    n = write(sock,"<!doctype html><HTML><HEAD><meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\"><TITLE>Aamer & Abdallah</TITLE></HEAD><BODY><H1>Hello World</H1>The is TESTING</BODY></HTML>",186);
    if (n < 0) error("ERROR writing to socket");
 
-  //sleep(1);
+   sleep(1);
 }
