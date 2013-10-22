@@ -1,0 +1,4 @@
+fold/image.jpg
+test.html
+fold/template.txt
+fold/file.b

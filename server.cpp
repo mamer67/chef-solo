@@ -163,10 +163,10 @@ int main(int argc, char *argv[]) {
 	struct sockaddr_in serv_addr, cli_addr;
 
 	// check if port number is provided
-	/*if (argc < 2) {
-	 fprintf(stderr, "ERROR, must provide port\n");
-	 exit(1);
-	 }*/
+	if (argc < 2) {
+		fprintf(stderr, "ERROR, must provide port\n");
+		exit(1);
+	}
 
 	// open new network-stream socket with default protocol
 	sockfd = socket(AF_INET, SOCK_STREAM, 0);
@@ -177,7 +177,7 @@ int main(int argc, char *argv[]) {
 	bzero((char *) &serv_addr, sizeof(serv_addr));
 
 	// take port no as input from console
-	portno = 8080;	//atoi(argv[1]);
+	portno = atoi(argv[1]);
 
 	// set the serv_addr object
 
